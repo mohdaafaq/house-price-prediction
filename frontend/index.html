@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>House Price Predictor</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            <h1>🏠 House Price Predictor</h1>
+            <p>Get an accurate estimate of your property value</p>
+        </div>
+
+        <form id="predictionForm">
+
+            <div class="form-section">
+                <h3>Property Details</h3>
+                
+                <div class="form-group">
+                    <label for="area">Area (sq.ft) *</label>
+                    <input
+                        type="number"
+                        id="area"
+                        placeholder="e.g., 2500"
+                        required
+                    >
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="bedrooms">Bedrooms *</label>
+                        <input
+                            type="number"
+                            id="bedrooms"
+                            placeholder="e.g., 3"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bathrooms">Bathrooms *</label>
+                        <input
+                            type="number"
+                            id="bathrooms"
+                            placeholder="e.g., 2"
+                            required
+                        >
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="stories">Stories *</label>
+                        <input
+                            type="number"
+                            id="stories"
+                            placeholder="e.g., 2"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="parking">Parking Spaces *</label>
+                        <input
+                            type="number"
+                            id="parking"
+                            placeholder="e.g., 1"
+                            required
+                        >
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Additional Info</h3>
+                
+                <div class="form-group">
+                    <label for="age">House Age (years) *</label>
+                    <input
+                        type="number"
+                        id="age"
+                        placeholder="e.g., 5"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="location">Location *</label>
+                    <select id="location" required>
+                        <option value="">Select a location...</option>
+                        <option value="Jaipur">Jaipur</option>
+                        <option value="Udaipur">Udaipur</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Mumbai">Mumbai</option>
+                    </select>
+                </div>
+            </div>
+
+            <button type="submit" class="btn-predict">
+                🔮 Predict Price
+            </button>
+
+        </form>
+
+        <div id="result"></div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
